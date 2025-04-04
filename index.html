@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Gallery</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: serif;
+      margin: 0;
+      padding: 0;
+      background: url(bg.jpg) no-repeat;
+	  background-size: cover;
+	  background-position: center;
+    }
+
+    header {
+      background-color: rgba(0,0,0,0.2);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3.6rem;
+	  -webkit-text-stroke-color: black;
+      -webkit-text-stroke-width: 1px;
+    }
+
+    /* Navigation Buttons */
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #483D8B;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #6A5ACD;
+      transform: translateY(-3px);
+	  }
+
+    /* Section Tiles */
+    .tile {
+	  font-size: 17px;
+      padding: 38px;
+      margin: 20px auto;
+      max-width: 1000px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 5px solid #B0C4DE;
+    }
+
+    .tile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+	font-size: 20px;
+      text-align: center;
+      padding: 25px;
+      background-color: rgba(0,0,0,0.2);
+      color: #fff;
+      width: 100%;
+      margin-top: 20px;
+      box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Gallery Styles */
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery-item {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Hidden Sections */
+    .hidden {
+      display: none;
+    }
+
+    /* About Me Section */
+    #about p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* Contact Section */
+    #contact ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #contact ul li {
+      margin: 10px 0;
+    }
+
+    #contact ul li a {
+      color: #1abc9c;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    #contact ul li a:hover {
+      color: #16a085;
+    }
+	
+	.data {
+  margin-top: 30px;
+}
+
+	.back {
+  font-size: 18px;
+  background: #4070f4;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.back:hover {
+  background: #000;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CASSANDRA MANABAT</h1>
+    <nav>
+      <ul>
+        <li><a href="file:///C:/Users/cassa/OneDrive/Desktop/Emp-tech%20finals/try.html" onclick="showSection('about')">ABOUT ME</a></li>
+        <li><a href="file:///C:/Users/cassa/OneDrive/Desktop/Emp-tech%20finals/index2.html" onclick="showSection('contact')">CONTACT & SOCIAL MEDIAS</a></li>
+        <li><a href="file:///C:/Users/cassa/OneDrive/Desktop/Emp-tech%20finals/galley.html" onclick="showSection('gallery')">PHOTO GALLERY</a></li>
+		<li><a href="file:///C:/Users/cassa/OneDrive/Desktop/Emp-tech%20finals/moree.html" onclick="showSection('more')">MORE INFO</a></li>
+		
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about" class="tile">
+    <h2>ABOUT ME: A SHORT BACKGROUND</h2>
+    <p>Since childhood, I have been drawn to the world of art. It wasn’t something I simply liked—it was a part of me, woven into the fabric of my being. Whether it was sketching in the margins of my notebooks, experimenting with colors, or simply observing the world with an artist’s eye, creativity was my constant companion. But as I grew older, I realized that my passion wasn’t confined to a single form of expression. I wanted to explore, to create beyond the boundaries of paper and canvas.  
+
+Life, to me, has always been an adventure. Not the kind you read about in fairytales, where the hero follows a set path to a predetermined destiny, but a raw, unpredictable journey full of discoveries, mistakes, and moments of clarity. I never felt the need to rigidly follow academic standards—I preferred to carve my own way, to learn at my own pace. I found joy in understanding rather than memorizing, in experimenting rather than conforming. While some might say that success demands sacrifice and stress, I have always believed that passion, when nurtured correctly, leads to excellence without unnecessary pressure.  
+
+That belief has guided me to one of the biggest decisions of my life: choosing to pursue architecture in college. Architecture isn’t just about designing buildings—it’s about storytelling, about shaping the world through creativity and logic combined. It’s a perfect blend of my love for art and my curiosity for structure, form, and function. The idea that something I create could one day stand tall in the real world, influencing lives and landscapes, fills me with excitement. This dream is what fuels me now, pushing me forward into a future that I am eager to build, quite literally.  
+
+But my journey isn’t just about academia. Beyond my studies, I find joy in many things. Gaming, for example, has become an unexpected source of lessons and thrill. I particularly enjoy Mobile Legends: Bang Bang, where I get to test my strategy, quick thinking, and teamwork. Of course, when I’m playing solo ranked, I tend to be a bit selfish—I can’t help it, the competitive side of me takes over! Yet, even in the digital battlefield, I find echoes of my real-life philosophy: learning through experience, adapting to challenges, and always striving to be better.  
+
+And then there’s my love for animals. Cats, with their mysterious yet affectionate nature, have always fascinated me. I find a deep sense of comfort in their quiet presence, their soft purrs a reminder of life’s simpler joys. But my home isn’t just ruled by feline grace—I also have a pet dog, a loyal and loving companion who adds balance to my life with boundless energy and devotion. Together, they remind me that life isn’t just about chasing dreams; it’s also about enjoying the little moments of warmth, connection, and companionship.  
+
+As I stand at the threshold of a new chapter, I can’t help but feel a sense of wonder about what lies ahead. The world is vast, full of mysteries waiting to be uncovered. Some days, I may stumble; other days, I may find pieces of the puzzle that is life. But no matter what, I will continue to explore, to create, to learn. Because in the end, life isn’t about reaching a destination—it’s about the journey, the adventure, and the stories we weave along the way.  
+
+And my story? It’s only just beginning.
+</p>
+ <div class="data">
+		  <a href="file:///C:/Users/cassa/OneDrive/Desktop/Emp-tech%20finals/try.html" class="back">BACK</a>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Contact & Social Media Section -->
+  <section id="contact" class="tile hidden">
+    <h2>Contact & Social Media</h2>
+    <p>If you'd like to connect with me, feel free to reach out via email or follow me on social media:</p>
+    <ul>
+      <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+      <li>Instagram: <a href="https://instagram.com/yourprofile">@yourprofile</a></li>
+      <li>Twitter: <a href="https://twitter.com/yourprofile">@yourprofile</a></li>
+    </ul>
+  </section>
+
+  <!-- Photo Gallery Section -->
+  <section id="gallery" class="tile hidden">
+    <h2>Photo Gallery</h2>
+    <div class="gallery-container">
+      <div class="gallery-item"><img src="1.jpg" alt="Photo 1"></div>
+      <div class="gallery-item"><img src="2.jpg" alt="Photo 2"></div>
+      <div class="gallery-item"><img src="3.jpg" alt="Photo 3"></div>
+      <div class="gallery-item"><img src="4.jpg" alt="Photo 4"></div>
+      <div class="gallery-item"><img src="5.jpg" alt="Photo 5"></div>
+      <div class="gallery-item"><img src="6.jpg" alt="Photo 6"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CASSANDRA G. MANABAT, ALL RIGHTS RESERVED.</p>
+  </footer>
+
+  <script>
+    // JavaScript to toggle sections
+    function showSection(sectionId) {
+      // Hide all sections
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.add('hidden');
+      });
+
+      // Show the selected section
+      document.getElementById(sectionId).classList.remove('hidden');
+    }
+
+    // Show the "About Me" section by default
+    showSection('about');
+  </script>
+</body>
+</html>
